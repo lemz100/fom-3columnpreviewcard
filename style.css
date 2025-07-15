@@ -23,8 +23,9 @@
     --gray100: hsl(0, 0%, 95%);
 }
 
+
 html, body {
-    min-height: 100%;
+    min-height: 100vh;
 }
 
 body {
@@ -115,9 +116,6 @@ body {
 }
 
 @media (min-width: 1440px) {
-    body {
-        height: 100vh;
-    }
     body, .cards {
         flex-direction: row;
     }
