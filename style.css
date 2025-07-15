@@ -1,0 +1,124 @@
+@font-face {
+    font-family: Lexend Deca;
+    src: url('./fonts/LexendDeca-VariableFont_wght.ttf');
+    font-weight: 400;
+}
+@font-face {
+    font-family: Big Shoulders;
+    src: url('./fonts/BigShoulders-VariableFont_opsz\,wght.ttf');
+    font-weight: 700;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --gold500: hsl(31, 77%, 52%);
+    --cyan800: hsl(184, 100%, 22%);
+    --green950: hsl(179, 100%, 13%);
+    --transparent_white: hsla(0, 0%, 100%, 0.75);
+    --gray100: hsl(0, 0%, 95%);
+}
+
+html, body {
+    min-height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 0.5rem;
+    background-color: var(--gray100);
+}
+
+
+.cards {
+    width: calc(100% - 5vw);
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2.5rem 2rem;
+}
+
+.sedan {
+    background-color: var(--gold500);
+}
+.sedan button {
+    color: var(--gold500);
+}
+.sedan button:hover {
+    cursor: pointer;
+    background-color: var(--gold500);
+}
+.suv {
+    background-color: var(--cyan800);
+}
+.suv button {
+    color: var(--cyan800);
+}
+.suv button:hover {
+    background-color: var(--cyan800);
+}
+.luxury {
+    background-color: var(--green950);
+}
+.luxury button {
+    color: var(--green950);
+}
+.luxury button:hover {
+    cursor: pointer;
+    background-color: var(--green950);
+}
+
+.card img {
+    display: block;
+}
+
+.title {
+    font-family: Big Shoulders;
+    color: var(--gray100);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.content {
+    font-family: Lexend Deca;
+    color: var(--transparent_white);
+    text-align: left;
+    font-size: 0.95rem;
+    line-height: 180%;
+}
+
+.card button {
+    background-color: var(--gray100);
+    border: 2px solid var(--gray100);
+    border-radius: 3rem;
+    text-align: center;
+    padding: 1rem 2rem;
+    font-family: Lexend Deca;
+    font-size: 1.2rem;
+}
+.card button:hover {
+    color: var(--gray100);
+}
+
+@media (min-width: 1440px) {
+    body {
+        height: 100vh;
+    }
+    body, .cards {
+        flex-direction: row;
+    }
+}
